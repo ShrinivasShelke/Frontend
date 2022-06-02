@@ -1,9 +1,11 @@
 import React from "react";
+import Button from "../../shared/components/UIELement/Button";
 import Card from "../../shared/components/UIELement/Card";
 import "./PlaceItem.css"
 
 
 const PlaceItem = (props) => {
+    console.log(props)
     
     return (
         <li className="place-item ">
@@ -18,8 +20,8 @@ const PlaceItem = (props) => {
                     <p>{props.description}</p>
                 </div>
                 <div className="place-item__actions ">
-                    <button>View on map</button>
-                    <button>Edit</button>
+                    <Button>View on map</Button>
+                    <Button to={`/place/${props.id}`}>Edit</Button> 
                 </div>
             </Card>
 

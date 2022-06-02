@@ -11,9 +11,8 @@ const DUMMY_PLACES=[
         imageUrl:"https://upload.wikimedia.org/wikipedia/commons/b/ba/Kochi_Metro_train_at_Palarivattom%2C_Aug_2017.jpg",
         address:" 1, 2, Karve Rd, opposite Sndt College, Pandurang Colony, Erandwane, Pune",
         location:{
-            lat:"18.5579709",
-            lng:"18.5579709"
-
+            lat:18.5579709,
+            lng:18.5579709
         },
         creatorId:"u1"
 
@@ -36,13 +35,9 @@ const DUMMY_PLACES=[
 const UserPlaces= () => {
     const userId=useParams().userId;
     const loaderItems=DUMMY_PLACES.filter(place=>place.creatorId===userId)
-    
-
-
     return (
          <PlaceList items={loaderItems}/>
-       
-    )
+       )
 }
 
 export default UserPlaces;

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import MainHeader from "./MainHeader";
 import "./MainNavigation.css"
 import NavigationLink from "./NavigationLink";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -16,17 +18,13 @@ const MainNavigation=()=>{
         <span/>
         <span/>
         </button>
-
         <h1 className="main_navigation__title">
-        <Link to="/">your place</Link>
+        <Link to="/"><FontAwesomeIcon icon={faCoffee}/></Link>
         </h1>
         <nav>
             <NavigationLink></NavigationLink>
         </nav>
-        
         </MainHeader>
-       
-        
         </>
 
     )
